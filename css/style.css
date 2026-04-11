@@ -1317,7 +1317,7 @@ footer {
     justify-content: center;
     /* 🔥 VERTICAL CENTER */
 
-    gap: 18px;
+    gap: 30px;
     /* 🔥 spacing perfect */
 
     transform: translateX(-100%);
@@ -1359,13 +1359,22 @@ footer {
     font-size: 15px;
   } */
   .nav-link {
-    width: 100%;
-    text-align: center;
-    /* 🔥 center text */
-    padding: 14px 0;
-    font-size: 16px;
-    border-radius: 10px;
-  }
+  width: 100%;
+  text-align: center;
+
+  padding: 18px 0;     /* 🔥 height badhayi */
+  font-size: 17px;
+  letter-spacing: 0.5px;
+
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
   .menu-toggle {
     display: flex;
