@@ -60,13 +60,8 @@ function closeMenu() {
   overlay.classList.remove('open');
   icon.className = 'fas fa-bars';
 
-  // 🔥 UNLOCK SCROLL
-  document.body.style.position = '';
-  document.body.style.top = '';
-  document.body.style.width = '';
-
-  // 🔥 RESTORE SCROLL POSITION
-  window.scrollTo(0, scrollPosition);
+  // ✅ UNLOCK SCROLL
+  document.body.style.overflow = '';
 }
 
 function toggleMenu() {
@@ -74,22 +69,17 @@ function toggleMenu() {
   const overlay = document.getElementById('navOverlay');
   const icon = document.querySelector('.menu-toggle i');
 
-  const isOpen = nav.classList.contains('open');
+  nav.classList.toggle('open');
+  overlay.classList.toggle('open');
 
-  if (isOpen) {
-    closeMenu();
-  } else {
-    // 🔥 SAVE CURRENT SCROLL
-    scrollPosition = window.scrollY;
-
-    nav.classList.add('open');
-    overlay.classList.add('open');
+  if (nav.classList.contains('open')) {
     icon.className = 'fas fa-times';
 
-    // 🔥 LOCK SCROLL (iPhone safe)
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollPosition}px`;
-    document.body.style.width = '100%';
+    // ✅ SIMPLE SCROLL LOCK
+    document.body.style.overflow = 'hidden';
+  } else {
+    icon.className = 'fas fa-bars';
+    document.body.style.overflow = '';
   }
 }
 
