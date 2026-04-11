@@ -2,6 +2,9 @@
    AH VERTEX SOLUTION — Main Stylesheet
    Same theme as reference: Dark, Gradient, Modern IT Company
 ============================================================ */
+html, body {
+  overflow-x: hidden;
+}
 
 :root {
   --primary: #6366f1;
@@ -55,7 +58,8 @@ img {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;   /* 24 → 20 kar de */
+  overflow: hidden;
 }
 
 section {
@@ -151,6 +155,7 @@ nav {
   z-index: 999;
   padding: 18px 0;
   transition: all 0.4s ease;
+  max-width: 100vw;
 }
 
 nav.scrolled {
@@ -327,6 +332,7 @@ nav.scrolled {
   text-align: center;
   padding-top: 90px;
   overflow: hidden;
+  max-width: 100vw;   /* 🔥 FIX */
   background: linear-gradient(160deg, #0d1526 0%, #0f172a 40%, #0a1628 100%);
 }
 
@@ -344,6 +350,8 @@ nav.scrolled {
   position: absolute;
   inset: 0;
   pointer-events: none;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .particle {
@@ -1485,4 +1493,8 @@ footer {
     min-width: 75px;
     padding: 18px 14px;
   }
+}
+
+* {
+  max-width: 100%;
 }
