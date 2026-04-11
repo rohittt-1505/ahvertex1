@@ -7,6 +7,12 @@
     overflow-x: hidden;
   }
 
+  body.menu-open {
+  overflow: hidden;
+  height: 100vh;
+  touch-action: none; /* 🔥 iPhone scroll block */
+}
+
   :root {
     --primary: #6366f1;
     --secondary: #06b6d4;
@@ -150,24 +156,43 @@
   /* ============================================================
     NAVBAR
   ============================================================ */
-  nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 999;
-    padding: 18px 0;
-    transition: all 0.4s ease;
-    max-width: 100vw;
-  }
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
 
-  nav.scrolled {
-    background: rgba(15, 23, 42, 0.95);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    padding: 12px 0;
-    border-bottom: 1px solid var(--border);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-  }
+  width: 100%;
+  height: auto;
+
+  z-index: 9999; /* 🔥 high so never hide */
+
+  padding: 18px 0;
+
+  background: transparent;
+
+  transition: all 0.3s ease;
+
+  /* 🔥 IMPORTANT FIXES */
+  transform: translateZ(0);   /* prevent iOS glitch */
+  -webkit-transform: translateZ(0);
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+ nav.scrolled {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  padding: 12px 0;
+
+  border-bottom: 1px solid var(--border);
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+
+  transform: translateZ(0); /* 🔥 fix flicker */
+}
 
   .nav-container {
     display: flex;
@@ -198,6 +223,7 @@
     display: flex;
     list-style: none;
     gap: 8px;
+    height: 100vh;   /* 🔥 full height fix */
   }
 
   .nav-link {
@@ -334,7 +360,7 @@
     text-align: center;
     padding-top: 90px;
     overflow: hidden;
-    max-width: 100vw;
+    /* max-width: 100vw; */
     /* 🔥 FIX */
     background: linear-gradient(160deg, #0d1526 0%, #0f172a 40%, #0a1628 100%);
   }
@@ -1501,11 +1527,4 @@
 
   * {
     max-width: 100%;
-  }
-
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
   }

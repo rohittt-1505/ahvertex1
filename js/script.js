@@ -51,18 +51,6 @@ window.addEventListener('scroll', () => {
 });
 
 // ===== MOBILE MENU =====
-function closeMenu() {
-  const nav = document.getElementById('navLinks');
-  const overlay = document.getElementById('navOverlay');
-  const icon = document.querySelector('.menu-toggle i');
-
-  nav.classList.remove('open');
-  overlay.classList.remove('open');
-  icon.className = 'fas fa-bars';
-
-  // ✅ UNLOCK SCROLL
-  document.body.style.overflow = '';
-}
 
 function toggleMenu() {
   const nav = document.getElementById('navLinks');
@@ -71,16 +59,25 @@ function toggleMenu() {
 
   nav.classList.toggle('open');
   overlay.classList.toggle('open');
+  document.body.classList.toggle('menu-open'); // 🔥 MAIN FIX
 
   if (nav.classList.contains('open')) {
     icon.className = 'fas fa-times';
-
-    // ✅ SIMPLE SCROLL LOCK
-    document.body.style.overflow = 'hidden';
   } else {
     icon.className = 'fas fa-bars';
-    document.body.style.overflow = '';
   }
+}
+
+function closeMenu() {
+  const nav = document.getElementById('navLinks');
+  const overlay = document.getElementById('navOverlay');
+  const icon = document.querySelector('.menu-toggle i');
+
+  nav.classList.remove('open');
+  overlay.classList.remove('open');
+  document.body.classList.remove('menu-open'); // 🔥 REMOVE LOCK
+
+  icon.className = 'fas fa-bars';
 }
 
 // Close menu on nav link click
