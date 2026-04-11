@@ -1,7 +1,7 @@
 /* ============================================================
    AH VERTEX SOLUTION — Main JavaScript
 ============================================================ */
-
+let scrollPosition = 0;
 // ===== PRELOADER =====
 window.addEventListener('load', () => {
   setTimeout(() => {
@@ -51,50 +51,45 @@ window.addEventListener('scroll', () => {
 });
 
 // ===== MOBILE MENU =====
-// function closeMenu() {
-//   document.getElementById('navLinks').classList.remove('open');
-//   const ov = document.getElementById('navOverlay');
-//   if (ov) ov.classList.remove('open');
-//   const icon = document.querySelector('.menu-toggle i');
-//   if (icon) { icon.className = 'fas fa-bars'; }
-// }
 function closeMenu() {
-  document.getElementById('navLinks').classList.remove('open');
-  document.getElementById('navOverlay').classList.remove('open');
-
+  const nav = document.getElementById('navLinks');
+  const overlay = document.getElementById('navOverlay');
   const icon = document.querySelector('.menu-toggle i');
-  if (icon) icon.className = 'fas fa-bars';
 
-  document.body.style.overflow = 'auto';
+  nav.classList.remove('open');
+  overlay.classList.remove('open');
+  icon.className = 'fas fa-bars';
+
+  // 🔥 UNLOCK SCROLL
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.width = '';
+
+  // 🔥 RESTORE SCROLL POSITION
+  window.scrollTo(0, scrollPosition);
 }
 
-// function toggleMenu() {
-//   const nav = document.getElementById('navLinks');
-//   const ov = document.getElementById('navOverlay');
-//   const icon = document.querySelector('.menu-toggle i');
-//   const isOpen = nav.classList.contains('open');
-//   if (isOpen) {
-//     closeMenu();
-//   } else {
-//     nav.classList.add('open');
-//     if (ov) ov.classList.add('open');
-//     if (icon) icon.className = 'fas fa-times';
-//   }
-// }
 function toggleMenu() {
   const nav = document.getElementById('navLinks');
   const overlay = document.getElementById('navOverlay');
   const icon = document.querySelector('.menu-toggle i');
 
-  nav.classList.toggle('open');
-  overlay.classList.toggle('open');
+  const isOpen = nav.classList.contains('open');
 
-  if (nav.classList.contains('open')) {
-    icon.className = 'fas fa-times';
-    document.body.style.overflow = 'hidden';   // 🔥 no scroll
+  if (isOpen) {
+    closeMenu();
   } else {
-    icon.className = 'fas fa-bars';
-    document.body.style.overflow = 'auto';
+    // 🔥 SAVE CURRENT SCROLL
+    scrollPosition = window.scrollY;
+
+    nav.classList.add('open');
+    overlay.classList.add('open');
+    icon.className = 'fas fa-times';
+
+    // 🔥 LOCK SCROLL (iPhone safe)
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.width = '100%';
   }
 }
 
