@@ -8,10 +8,11 @@
   }
 
   body.menu-open {
-  overflow: hidden;
-  height: 100vh;
-  touch-action: none; /* 🔥 iPhone scroll block */
-}
+    overflow: hidden;
+    height: 100vh;
+    touch-action: none;
+    /* 🔥 iPhone scroll block */
+  }
 
   :root {
     --primary: #6366f1;
@@ -156,43 +157,46 @@
   /* ============================================================
     NAVBAR
   ============================================================ */
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
 
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 
-  z-index: 9999; /* 🔥 high so never hide */
+    z-index: 9999;
+    /* 🔥 high so never hide */
 
-  padding: 18px 0;
+    padding: 18px 0;
 
-  background: transparent;
+    background: transparent;
 
-  transition: all 0.3s ease;
+    transition: all 0.3s ease;
 
-  /* 🔥 IMPORTANT FIXES */
-  transform: translateZ(0);   /* prevent iOS glitch */
-  -webkit-transform: translateZ(0);
+    /* 🔥 IMPORTANT FIXES */
+    transform: translateZ(0);
+    /* prevent iOS glitch */
+    -webkit-transform: translateZ(0);
 
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
 
- nav.scrolled {
-  background: rgba(15, 23, 42, 0.95);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  nav.scrolled {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 
-  padding: 12px 0;
+    padding: 12px 0;
 
-  border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 
-  transform: translateZ(0); /* 🔥 fix flicker */
-}
+    transform: translateZ(0);
+    /* 🔥 fix flicker */
+  }
 
   .nav-container {
     display: flex;
@@ -223,7 +227,8 @@ nav {
     display: flex;
     list-style: none;
     gap: 8px;
-    height: 100vh;   /* 🔥 full height fix */
+    height: 100vh;
+    /* 🔥 full height fix */
   }
 
   .nav-link {
