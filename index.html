@@ -4,53 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AH Vertex Solution — IT Solutions & Digital Transformation</title>
-  <meta name="description"
-    content="AH Vertex Solution — Your technology partner for the AI-driven world. Custom software, cloud, mobile, SEO and tech strategy.">
+  <title>AH Vertex Solution - IT Solutions</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <!-- CURSOR -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursorFollower"></div>
-
-  <!-- PRELOADER -->
+  <!-- ===== PRELOADER ===== -->
   <div class="preloader" id="preloader">
-    <div class="pre-inner">
-      <svg viewBox="0 0 100 100" class="pre-logo-svg">
-        <text x="50%" y="58%" text-anchor="middle" class="pre-logo-text">AH</text>
-      </svg>
-      <div class="pre-bar">
-        <div class="pre-fill" id="preFill"></div>
-      </div>
-      <p class="pre-label" id="preLabel">0%</p>
+    <div class="loader-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
+    <p class="loader-text">AH Vertex Solution</p>
   </div>
 
-  <!-- NAVBAR -->
+  <!-- ===== NAVBAR ===== -->
   <nav id="navbar">
-    <div class="nav-inner">
-      <a href="#home" class="nav-logo">
-        AH<span>Vertex</span>Solution
+    <div class="container nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-ah">AH</span><span class="logo-vertex"> Vertex</span><span class="logo-sol"> Solution</span>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="nl">Home</a></li>
-        <li><a href="#about" class="nl">About</a></li>
-        <li><a href="#services" class="nl">Services</a></li>
-        <li><a href="#workflow" class="nl">Approach</a></li>
-        <li><a href="#testimonials" class="nl">Clients</a></li>
-        <li><a href="#contact" class="nl cta-nav">Let's Talk</a></li>
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#workflow" class="nav-link">Approach</a></li>
+        <li><a href="#testimonials" class="nav-link">Clients</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
-        <i class="fas fa-bars" id="hambIcon"></i>
+      <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="Menu">
+        <i class="fas fa-bars"></i>
       </button>
     </div>
   </nav>
@@ -59,132 +51,122 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="home">
-    <div class="hero-canvas">
-      <canvas id="starCanvas"></canvas>
-    </div>
-    <div class="hero-orb hero-orb1"></div>
-    <div class="hero-orb hero-orb2"></div>
-
-    <div class="hero-content">
-      <div class="hero-eyebrow">
-        <span class="eyebrow-dot"></span>
-        Your Technology Partner · AI-Driven World
+    <div class="hero-bg-grid"></div>
+    <div class="hero-particles" id="particles"></div>
+    <div class="container hero-container" data-aos="fade-up">
+      <div class="hero-badge">🚀 Your Technology Partner for the AI-Driven World</div>
+      <h1 class="hero-title">Building Digital<br><span class="gradient-text">Excellence</span></h1>
+      <p class="hero-subtitle">We transform businesses through intelligent automation and next-generation technology
+        solutions, creating sustainable competitive advantages.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-primary">Get Started <i class="fas fa-arrow-right"></i></a>
+        <a href="#services" class="btn btn-outline">Our Services</a>
       </div>
-      <h1 class="hero-heading">
-        We Build<br>
-        <em>Digital</em><br>
-        <span class="outline-text">Excellence</span>
-      </h1>
-      <p class="hero-desc">Transforming businesses through intelligent automation and next-generation technology —
-        creating sustainable competitive advantage.</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn-gold">Start a Project <i class="fas fa-arrow-right"></i></a>
-        <a href="#services" class="btn-ghost">Our Services</a>
-      </div>
-      <div class="hero-metrics">
-        <div class="metric">
-          <div class="metric-num" data-target="200">0</div>
-          <div class="metric-plus">+</div>
-          <div class="metric-label">Projects</div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">5+</span>
+          <span class="stat-label">Years Experience</span>
         </div>
-        <div class="metric-sep"></div>
-        <div class="metric">
-          <div class="metric-num" data-target="50">0</div>
-          <div class="metric-plus">+</div>
-          <div class="metric-label">Clients</div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">200+</span>
+          <span class="stat-label">Projects Delivered</span>
         </div>
-        <div class="metric-sep"></div>
-        <div class="metric">
-          <div class="metric-num" data-target="5">0</div>
-          <div class="metric-plus">+</div>
-          <div class="metric-label">Years Exp.</div>
-        </div>
-        <div class="metric-sep"></div>
-        <div class="metric">
-          <div class="metric-num" data-target="24">0</div>
-          <div class="metric-plus">/7</div>
-          <div class="metric-label">Support</div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">50+</span>
+          <span class="stat-label">Happy Clients</span>
         </div>
       </div>
     </div>
-
-    <div class="hero-scroll">
-      <div class="scroll-wheel"></div>
-      <span>Scroll</span>
+    <div class="hero-scroll-hint">
+      <span>Scroll Down</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- MARQUEE STRIP -->
-  <div class="marquee-wrap">
-    <div class="marquee-track">
-      <span>Web Development</span><span class="dot">◆</span>
-      <span>SEO Services</span><span class="dot">◆</span>
-      <span>Mobile Solutions</span><span class="dot">◆</span>
-      <span>Cloud Architecture</span><span class="dot">◆</span>
-      <span>IT Operations</span><span class="dot">◆</span>
-      <span>Tech Strategy</span><span class="dot">◆</span>
-      <span>AI Automation</span><span class="dot">◆</span>
-      <span>DevOps Engineering</span><span class="dot">◆</span>
-      <!-- duplicate -->
-      <span>Web Development</span><span class="dot">◆</span>
-      <span>SEO Services</span><span class="dot">◆</span>
-      <span>Mobile Solutions</span><span class="dot">◆</span>
-      <span>Cloud Architecture</span><span class="dot">◆</span>
-      <span>IT Operations</span><span class="dot">◆</span>
-      <span>Tech Strategy</span><span class="dot">◆</span>
-      <span>AI Automation</span><span class="dot">◆</span>
-      <span>DevOps Engineering</span><span class="dot">◆</span>
+  <!-- ===== TICKER ===== -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>Web Development</span>
+      <span class="sep">✦</span>
+      <span>SEO Services</span>
+      <span class="sep">✦</span>
+      <span>Mobile Solutions</span>
+      <span class="sep">✦</span>
+      <span>Cloud Architecture</span>
+      <span class="sep">✦</span>
+      <span>IT Operations</span>
+      <span class="sep">✦</span>
+      <span>Tech Strategy</span>
+      <span class="sep">✦</span>
+      <span>AI Solutions</span>
+      <span class="sep">✦</span>
+      <span>DevOps Engineering</span>
+      <span class="sep">✦</span>
+      <span>Custom Software</span>
+      <span class="sep">✦</span>
+      <span>Web Development</span>
+      <span class="sep">✦</span>
+      <span>SEO Services</span>
+      <span class="sep">✦</span>
+      <span>Mobile Solutions</span>
+      <span class="sep">✦</span>
+      <span>Cloud Architecture</span>
+      <span class="sep">✦</span>
+      <span>IT Operations</span>
+      <span class="sep">✦</span>
+      <span>Tech Strategy</span>
+      <span class="sep">✦</span>
+      <span>AI Solutions</span>
+      <span class="sep">✦</span>
+      <span>DevOps Engineering</span>
+      <span class="sep">✦</span>
+      <span>Custom Software</span>
+      <span class="sep">✦</span>
     </div>
   </div>
 
   <!-- ===== ABOUT ===== -->
   <section class="about" id="about">
     <div class="container">
-      <div class="about-wrap">
-        <div class="about-left reveal-left">
-          <div class="section-chip">About Us</div>
-          <h2 class="section-heading">We Are <em>AH Vertex</em> Solution</h2>
-          <p>A forward-thinking IT consulting and product engineering company that bridges the gap between human
-            potential and artificial intelligence — creating sustainable competitive advantages for organizations
-            worldwide.</p>
+      <div class="about-grid">
+        <div class="about-left" data-aos="fade-right">
+          <div class="section-tag">Who We Are</div>
+          <h2 class="section-title">About <span class="gradient-text">AH Vertex Solution</span></h2>
+          <p>AH Vertex Solution is a forward-thinking IT consulting and product engineering company that bridges the gap
+            between human potential and artificial intelligence, creating sustainable competitive advantages for
+            organizations worldwide.</p>
           <p>We specialize in architecting mission-critical systems that drive operational efficiency, accelerate
-            digital transformation, and enable sustainable business growth through deep technical expertise and
-            strategic thinking.</p>
-          <a href="#contact" class="btn-gold" style="margin-top:32px; display:inline-flex;">Work With Us <i
+            digital transformation, and enable sustainable business growth.</p>
+          <p>By leveraging modern technologies, cloud-native architectures, and industry best practices, we help
+            organizations modernize legacy systems, optimize infrastructure, and build future-ready digital ecosystems
+            that scale with confidence.</p>
+          <a href="#contact" class="btn btn-primary" style="margin-top:20px;">Work With Us <i
               class="fas fa-arrow-right"></i></a>
         </div>
-        <div class="about-right reveal-right">
-          <div class="about-pillars">
-            <div class="pillar">
-              <div class="pillar-icon"><i class="fas fa-bullseye"></i></div>
-              <div>
-                <h4>Our Mission</h4>
-                <p>Democratize AI and intelligent automation, making cutting-edge technology accessible to businesses of
-                  all sizes.</p>
-              </div>
+        <div class="about-right" data-aos="fade-left">
+          <div class="about-cards">
+            <div class="about-card">
+              <div class="about-card-icon"><i class="fas fa-bullseye"></i></div>
+              <h3>Our Mission</h3>
+              <p>To democratize artificial intelligence and intelligent automation, making cutting-edge technology
+                accessible to businesses of all sizes.</p>
             </div>
-            <div class="pillar">
-              <div class="pillar-icon"><i class="fas fa-eye"></i></div>
-              <div>
-                <h4>Our Vision</h4>
-                <p>Become the global catalyst for intelligent business transformation, where AI and human creativity
-                  converge.</p>
-              </div>
+            <div class="about-card">
+              <div class="about-card-icon"><i class="fas fa-eye"></i></div>
+              <h3>Our Vision</h3>
+              <p>To become the global catalyst for intelligent business transformation, where AI and human creativity
+                converge to solve tomorrow's challenges today.</p>
             </div>
-            <div class="pillar">
-              <div class="pillar-icon"><i class="fas fa-gem"></i></div>
-              <div>
-                <h4>Core Values</h4>
-                <p>Excellence · Human-Centric AI · Simplicity in Complexity · Agile Innovation · Partnership Beyond
-                  Projects</p>
-              </div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon"><i class="fas fa-headset"></i></div>
-              <div>
-                <h4>24/7 Support</h4>
-                <p>Round-the-clock monitoring, incident response and dedicated support to keep your systems running
-                  flawlessly.</p>
+            <div class="about-card full-width">
+              <div class="about-card-icon"><i class="fas fa-heart"></i></div>
+              <h3>Core Values</h3>
+              <div class="values-list">
+                <span><i class="fas fa-check"></i> Excellence Through Innovation</span>
+                <span><i class="fas fa-check"></i> Human-Centric AI</span>
+                <span><i class="fas fa-check"></i> Simplicity in Complexity</span>
+                <span><i class="fas fa-check"></i> Partnership Beyond Projects</span>
               </div>
             </div>
           </div>
@@ -196,72 +178,73 @@
   <!-- ===== SERVICES ===== -->
   <section class="services" id="services">
     <div class="container">
-      <div class="section-header reveal-up">
-        <div class="section-chip">What We Do</div>
-        <h2 class="section-heading">Our <em>Services</em></h2>
-        <p class="section-sub">Comprehensive IT solutions tailored to accelerate your digital journey</p>
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag">What We Do</div>
+        <h2 class="section-title">Our <span class="gradient-text">Services</span></h2>
+        <p class="section-subtitle">Comprehensive IT solutions tailored to accelerate your digital journey</p>
       </div>
+      <div class="service-grid">
 
-      <div class="svc-grid">
-        <div class="svc-card reveal-up" style="--d:0ms">
-          <div class="svc-num">01</div>
-          <div class="svc-icon"><i class="fas fa-laptop-code"></i></div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-icon-wrap"><i class="fas fa-laptop-code"></i></div>
           <h3>Web Development</h3>
           <p>End-to-end development of scalable, maintainable, and performance-driven web solutions tailored to complex
-            business requirements.</p>
-          <div class="svc-tags"><span>React</span><span>ASP.NET</span><span>Node.js</span></div>
-          <div class="svc-arrow"><i class="fas fa-arrow-right"></i></div>
+            business and operational requirements.</p>
+          <div class="service-tags">
+            <span>React</span><span>Node.js</span><span>ASP.NET</span>
+          </div>
         </div>
 
-        <div class="svc-card reveal-up" style="--d:80ms">
-          <div class="svc-num">02</div>
-          <div class="svc-icon"><i class="fas fa-search"></i></div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon-wrap"><i class="fas fa-search"></i></div>
           <h3>SEO Services</h3>
           <p>Data-driven search engine optimization strategies that boost visibility, drive qualified traffic, and grow
-            organic reach sustainably.</p>
-          <div class="svc-tags"><span>On-Page</span><span>Technical</span><span>Analytics</span></div>
-          <div class="svc-arrow"><i class="fas fa-arrow-right"></i></div>
+            your organic reach sustainably.</p>
+          <div class="service-tags">
+            <span>On-Page</span><span>Technical</span><span>Analytics</span>
+          </div>
         </div>
 
-        <div class="svc-card reveal-up" style="--d:160ms">
-          <div class="svc-num">03</div>
-          <div class="svc-icon"><i class="fas fa-mobile-alt"></i></div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon-wrap"><i class="fas fa-mobile-alt"></i></div>
           <h3>Mobile Solutions</h3>
-          <p>Native and cross-platform mobile applications delivering exceptional user experiences across iOS and
-            Android platforms.</p>
-          <div class="svc-tags"><span>Flutter</span><span>React Native</span><span>iOS/Android</span></div>
-          <div class="svc-arrow"><i class="fas fa-arrow-right"></i></div>
+          <p>Native and cross-platform mobile applications that deliver exceptional user experiences across iOS and
+            Android devices.</p>
+          <div class="service-tags">
+            <span>Flutter</span><span>React Native</span><span>iOS/Android</span>
+          </div>
         </div>
 
-        <div class="svc-card reveal-up" style="--d:240ms">
-          <div class="svc-num">04</div>
-          <div class="svc-icon"><i class="fas fa-cloud"></i></div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon-wrap"><i class="fas fa-cloud"></i></div>
           <h3>Multi-Cloud Architecture</h3>
-          <p>Secure cloud-native architectures, CI/CD pipelines, and infrastructure as code optimized for high
-            availability and performance.</p>
-          <div class="svc-tags"><span>AWS</span><span>Azure</span><span>GCP</span></div>
-          <div class="svc-arrow"><i class="fas fa-arrow-right"></i></div>
+          <p>Design and implementation of secure cloud-native architectures, CI/CD pipelines, infrastructure as code,
+            and environments optimized for high availability.</p>
+          <div class="service-tags">
+            <span>AWS</span><span>Azure</span><span>GCP</span>
+          </div>
         </div>
 
-        <div class="svc-card reveal-up" style="--d:320ms">
-          <div class="svc-num">05</div>
-          <div class="svc-icon"><i class="fas fa-users-cog"></i></div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-icon-wrap"><i class="fas fa-users-cog"></i></div>
           <h3>Specialized Tech Experts</h3>
-          <p>On-demand senior technology specialists who augment your team with deep domain expertise across
+          <p>On-demand access to senior technology specialists who augment your team with deep domain expertise across
             cutting-edge technology stacks.</p>
-          <div class="svc-tags"><span>Staff Aug</span><span>Consulting</span><span>Training</span></div>
-          <div class="svc-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="service-tags">
+            <span>Staff Aug</span><span>Consulting</span><span>Training</span>
+          </div>
         </div>
 
-        <div class="svc-card reveal-up" style="--d:400ms">
-          <div class="svc-num">06</div>
-          <div class="svc-icon"><i class="fas fa-chart-line"></i></div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-icon-wrap"><i class="fas fa-chart-line"></i></div>
           <h3>Technology Strategy</h3>
           <p>Technical assessment, architecture consulting, and digital transformation planning aligned with long-term
-            business objectives.</p>
-          <div class="svc-tags"><span>Advisory</span><span>Roadmap</span><span>Assessment</span></div>
-          <div class="svc-arrow"><i class="fas fa-arrow-right"></i></div>
+            business and innovation objectives.</p>
+          <div class="service-tags">
+            <span>Advisory</span><span>Roadmap</span><span>Assessment</span>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -269,22 +252,22 @@
   <!-- ===== INDUSTRIES ===== -->
   <section class="industries">
     <div class="container">
-      <div class="section-header reveal-up">
-        <div class="section-chip">Industry Expertise</div>
-        <h2 class="section-heading">Industries We <em>Serve</em></h2>
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag">Industry Expertise</div>
+        <h2 class="section-title">Industries We <span class="gradient-text">Serve</span></h2>
       </div>
-      <div class="ind-grid reveal-up">
-        <div class="ind-card"><i class="fas fa-heartbeat"></i><span>Healthcare</span></div>
-        <div class="ind-card"><i class="fas fa-gavel"></i><span>Lawyers</span></div>
-        <div class="ind-card"><i class="fas fa-building"></i><span>Real Estate</span></div>
-        <div class="ind-card"><i class="fas fa-shield-alt"></i><span>Insurance</span></div>
-        <div class="ind-card"><i class="fas fa-university"></i><span>BFSI</span></div>
-        <div class="ind-card"><i class="fas fa-car"></i><span>Automotive</span></div>
-        <div class="ind-card"><i class="fas fa-graduation-cap"></i><span>Education</span></div>
-        <div class="ind-card"><i class="fas fa-hands-helping"></i><span>Non Profit</span></div>
-        <div class="ind-card"><i class="fas fa-store"></i><span>Retail</span></div>
-        <div class="ind-card"><i class="fas fa-shopping-cart"></i><span>E-Commerce</span></div>
-        <div class="ind-card"><i class="fas fa-code"></i><span>Software</span></div>
+      <div class="industry-grid" data-aos="fade-up">
+        <div class="industry-item"><i class="fas fa-heartbeat"></i><span>Healthcare</span></div>
+        <div class="industry-item"><i class="fas fa-gavel"></i><span>Lawyers</span></div>
+        <div class="industry-item"><i class="fas fa-building"></i><span>Real Estate</span></div>
+        <div class="industry-item"><i class="fas fa-shield-alt"></i><span>Insurance</span></div>
+        <div class="industry-item"><i class="fas fa-university"></i><span>BFSI</span></div>
+        <div class="industry-item"><i class="fas fa-car"></i><span>Automotive</span></div>
+        <div class="industry-item"><i class="fas fa-graduation-cap"></i><span>Education</span></div>
+        <div class="industry-item"><i class="fas fa-hands-helping"></i><span>Non Profit</span></div>
+        <div class="industry-item"><i class="fas fa-store"></i><span>Retail</span></div>
+        <div class="industry-item"><i class="fas fa-shopping-cart"></i><span>E-Commerce</span></div>
+        <div class="industry-item"><i class="fas fa-code"></i><span>Software</span></div>
       </div>
     </div>
   </section>
@@ -292,110 +275,88 @@
   <!-- ===== WORKFLOW ===== -->
   <section class="workflow" id="workflow">
     <div class="container">
-      <div class="section-header reveal-up">
-        <div class="section-chip">How We Work</div>
-        <h2 class="section-heading">Our <em>5-Step</em> Approach</h2>
-        <p class="section-sub">A proven methodology that ensures streamlined IT solutions delivered on time</p>
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag">How We Work</div>
+        <h2 class="section-title">Our <span class="gradient-text">5-Step Approach</span></h2>
+        <p class="section-subtitle">A proven methodology that ensures streamlined IT solutions from day one</p>
       </div>
+      <div class="workflow-steps">
 
-      <div class="wf-list">
-        <div class="wf-item reveal-up" style="--d:0ms">
-          <div class="wf-left">
-            <div class="wf-num">01</div>
-            <div class="wf-line"></div>
-          </div>
-          <div class="wf-body">
-            <div class="wf-icon"><i class="fas fa-comments"></i></div>
-            <div class="wf-text">
-              <h3>Consultation & Needs Analysis</h3>
-              <p>We first understand your challenges to tailor a solution that fits your needs. Deep-dive sessions to
-                map business goals to technical requirements.</p>
-            </div>
+        <div class="workflow-step" data-aos="fade-up" data-aos-delay="0">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <div class="step-icon"><i class="fas fa-comments"></i></div>
+            <h3>Consultation & Needs Analysis</h3>
+            <p>We first understand your challenges to tailor a solution that fits your needs. Deep-dive sessions to map
+              business goals to technical requirements.</p>
           </div>
         </div>
 
-        <div class="wf-item reveal-up" style="--d:80ms">
-          <div class="wf-left">
-            <div class="wf-num">02</div>
-            <div class="wf-line"></div>
-          </div>
-          <div class="wf-body">
-            <div class="wf-icon"><i class="fas fa-map"></i></div>
-            <div class="wf-text">
-              <h3>Planning & Strategy Development</h3>
-              <p>Our team crafts a strategic plan, defining the project roadmap and setting clear milestones, timelines
-                and deliverables.</p>
-            </div>
+        <div class="workflow-step" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <div class="step-icon"><i class="fas fa-map"></i></div>
+            <h3>Planning & Strategy Development</h3>
+            <p>Our team crafts a strategic plan, defining the project roadmap and setting timelines with clear
+              milestones and deliverables.</p>
           </div>
         </div>
 
-        <div class="wf-item reveal-up" style="--d:160ms">
-          <div class="wf-left">
-            <div class="wf-num">03</div>
-            <div class="wf-line"></div>
-          </div>
-          <div class="wf-body">
-            <div class="wf-icon"><i class="fas fa-pencil-ruler"></i></div>
-            <div class="wf-text">
-              <h3>Design & Development</h3>
-              <p>Our designers create intuitive interfaces while developers build scalable, robust systems using modern
-                technology stacks.</p>
-            </div>
+        <div class="workflow-step" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <div class="step-icon"><i class="fas fa-pencil-ruler"></i></div>
+            <h3>Design & Development</h3>
+            <p>Our designers create intuitive interfaces while developers build scalable, robust systems using modern
+              tech stacks.</p>
           </div>
         </div>
 
-        <div class="wf-item reveal-up" style="--d:240ms">
-          <div class="wf-left">
-            <div class="wf-num">04</div>
-            <div class="wf-line"></div>
-          </div>
-          <div class="wf-body">
-            <div class="wf-icon"><i class="fas fa-check-circle"></i></div>
-            <div class="wf-text">
-              <h3>Testing & Quality Assurance</h3>
-              <p>We rigorously test for security, performance, and reliability — resolving every issue before deployment
-                goes live.</p>
-            </div>
+        <div class="workflow-step" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+            <h3>Testing & Quality Assurance</h3>
+            <p>We rigorously test for security, performance, and reliability — resolving any issues before deployment.
+            </p>
           </div>
         </div>
 
-        <div class="wf-item reveal-up" style="--d:320ms">
-          <div class="wf-left">
-            <div class="wf-num">05</div>
-          </div>
-          <div class="wf-body">
-            <div class="wf-icon"><i class="fas fa-rocket"></i></div>
-            <div class="wf-text">
-              <h3>Deployment & Ongoing Support</h3>
-              <p>Zero-downtime deployment with 24/7 ongoing support, continuous monitoring and performance optimization.
-              </p>
-            </div>
+        <div class="workflow-step" data-aos="fade-up" data-aos-delay="400">
+          <div class="step-num">05</div>
+          <div class="step-content">
+            <div class="step-icon"><i class="fas fa-rocket"></i></div>
+            <h3>Deployment & Ongoing Support</h3>
+            <p>We deploy with zero downtime and provide 24/7 ongoing support, monitoring, and continuous optimization.
+            </p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ===== TECH STACK ===== -->
-  <section class="techstack">
+  <!-- ===== TECHNOLOGIES ===== -->
+  <section class="tech-section">
     <div class="container">
-      <div class="section-header reveal-up">
-        <div class="section-chip">Our Stack</div>
-        <h2 class="section-heading">Technologies We <em>Work With</em></h2>
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag">Our Stack</div>
+        <h2 class="section-title">Technologies We <span class="gradient-text">Work With</span></h2>
       </div>
-      <div class="tech-grid reveal-up">
-        <div class="tech-pill"><i class="fab fa-react"></i> React</div>
-        <div class="tech-pill"><i class="fab fa-node-js"></i> Node.js</div>
-        <div class="tech-pill"><i class="fab fa-python"></i> Python</div>
-        <div class="tech-pill"><i class="fab fa-aws"></i> AWS</div>
-        <div class="tech-pill"><i class="fab fa-docker"></i> Docker</div>
-        <div class="tech-pill"><i class="fab fa-js"></i> JavaScript</div>
-        <div class="tech-pill"><i class="fab fa-android"></i> Android</div>
-        <div class="tech-pill"><i class="fab fa-apple"></i> iOS</div>
-        <div class="tech-pill"><i class="fab fa-git-alt"></i> Git</div>
-        <div class="tech-pill"><i class="fas fa-database"></i> SQL/NoSQL</div>
-        <div class="tech-pill"><i class="fab fa-microsoft"></i> Azure</div>
-        <div class="tech-pill"><i class="fas fa-cloud"></i> GCP</div>
+      <div class="tech-grid" data-aos="fade-up">
+        <div class="tech-item"><i class="fab fa-react"></i><span>React</span></div>
+        <div class="tech-item"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+        <div class="tech-item"><i class="fab fa-python"></i><span>Python</span></div>
+        <div class="tech-item"><i class="fab fa-aws"></i><span>AWS</span></div>
+        <div class="tech-item"><i class="fab fa-docker"></i><span>Docker</span></div>
+        <div class="tech-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
+        <div class="tech-item"><i class="fab fa-flutter" style="font-size:32px; color:#54c5f8;"></i><span>Flutter</span>
+        </div>
+        <div class="tech-item"><i class="fab fa-android"></i><span>Android</span></div>
+        <div class="tech-item"><i class="fab fa-apple"></i><span>iOS</span></div>
+        <div class="tech-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
+        <div class="tech-item"><i class="fas fa-database"></i><span>SQL/NoSQL</span></div>
+        <div class="tech-item"><i class="fab fa-microsoft"></i><span>Azure</span></div>
       </div>
     </div>
   </section>
@@ -403,79 +364,82 @@
   <!-- ===== TESTIMONIALS ===== -->
   <section class="testimonials" id="testimonials">
     <div class="container">
-      <div class="section-header reveal-up">
-        <div class="section-chip">Client Love</div>
-        <h2 class="section-heading">What Our <em>Clients</em> Say</h2>
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag">Client Love</div>
+        <h2 class="section-title">What Our <span class="gradient-text">Clients Say</span></h2>
       </div>
-      <div class="testi-grid">
-        <div class="testi-card reveal-up" style="--d:0ms">
-          <div class="testi-quote">"</div>
-          <p>We've worked with AH Vertex Solution for over a year, and their IT services have been nothing short of
-            excellent. They are quick to respond, reliable, and their expertise keeps our systems running smoothly.</p>
-          <div class="testi-footer">
-            <div class="testi-avatar">M</div>
-            <div class="testi-info">
+      <div class="testimonial-grid">
+
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"We've worked with AH Vertex Solution for over a year, and their IT services have been nothing short of
+            excellent. They are quick to respond, reliable, and have helped us avoid several critical issues."</p>
+          <div class="testimonial-footer">
+            <div class="reviewer-avatar">M</div>
+            <div>
               <strong>Mina Bharti</strong>
               <span>Operations Manager</span>
             </div>
-            <div class="testi-stars">★★★★★</div>
+            <div class="stars">★★★★★ <em>5.0</em></div>
           </div>
         </div>
 
-        <div class="testi-card reveal-up" style="--d:100ms">
-          <div class="testi-quote">"</div>
-          <p>AH Vertex Solution made managing our IT effortless. Their expert team handled everything from cybersecurity
-            to system upgrades with precision. They proactively solved issues before they became problems.</p>
-          <div class="testi-footer">
-            <div class="testi-avatar">S</div>
-            <div class="testi-info">
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"AH Vertex Solution made managing our IT effortless. Their expert team handled everything from
+            cybersecurity to system upgrades with precision. They proactively solved issues before they became
+            problems."</p>
+          <div class="testimonial-footer">
+            <div class="reviewer-avatar">S</div>
+            <div>
               <strong>Shekhar Singh</strong>
               <span>CTO, TechCorp</span>
             </div>
-            <div class="testi-stars">★★★★★</div>
+            <div class="stars">★★★★★ <em>5.0</em></div>
           </div>
         </div>
 
-        <div class="testi-card reveal-up" style="--d:200ms">
-          <div class="testi-quote">"</div>
-          <p>Working with AH Vertex Solution has been a game changer. Their proactive approach to IT management saves us
-            time and resources, allowing us to focus on what matters most to the business.</p>
-          <div class="testi-footer">
-            <div class="testi-avatar">B</div>
-            <div class="testi-info">
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"Working with AH Vertex Solution has been a game changer for our business. Their proactive approach to IT
+            management saves us time and resources, allowing us to focus on what matters most."</p>
+          <div class="testimonial-footer">
+            <div class="reviewer-avatar">B</div>
+            <div>
               <strong>Baibhav Jain</strong>
               <span>HR Director</span>
             </div>
-            <div class="testi-stars">★★★★★</div>
+            <div class="stars">★★★★★ <em>5.0</em></div>
           </div>
         </div>
 
-        <div class="testi-card reveal-up" style="--d:300ms">
-          <div class="testi-quote">"</div>
-          <p>Exceptional service from start to finish. AH Vertex Solution delivered our cloud infrastructure on time and
-            exceeded every expectation. Their dedication to our success is truly unmatched.</p>
-          <div class="testi-footer">
-            <div class="testi-avatar">T</div>
-            <div class="testi-info">
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p>"Exceptional service from start to finish! AH Vertex Solution delivered our cloud infrastructure on time
+            and exceeded every expectation. Their dedication to our success is unmatched."</p>
+          <div class="testimonial-footer">
+            <div class="reviewer-avatar">T</div>
+            <div>
               <strong>Sophia Turner</strong>
               <span>Founder & CEO</span>
             </div>
-            <div class="testi-stars">★★★★★</div>
+            <div class="stars">★★★★★ <em>5.0</em></div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- ===== CTA ===== -->
-  <section class="cta-band">
-    <div class="cta-band-bg"></div>
-    <div class="container cta-inner reveal-up">
-      <div class="cta-text-wrap">
-        <h2>Ready to Transform<br>Your Business?</h2>
-        <p>Book a free consultation. Let's build something exceptional together.</p>
+  <section class="cta-section">
+    <div class="container" data-aos="zoom-in">
+      <div class="cta-box">
+        <div class="cta-glow"></div>
+        <h2>Your Technology Partner for the AI-Driven World</h2>
+        <p>Book a free consultation and let's discuss how we can transform your business.</p>
+        <a href="#contact" class="btn btn-white">Let's Talk <i class="fas fa-arrow-right"></i></a>
       </div>
-      <a href="#contact" class="btn-gold btn-large">Let's Talk <i class="fas fa-arrow-right"></i></a>
     </div>
   </section>
 
@@ -483,28 +447,28 @@
   <section class="contact" id="contact">
     <div class="container">
       <div class="contact-grid">
-        <div class="contact-left reveal-left">
-          <div class="section-chip">Get In Touch</div>
-          <h2 class="section-heading">Let's Build <em>Together</em></h2>
+        <div class="contact-info" data-aos="fade-right">
+          <div class="section-tag">Get In Touch</div>
+          <h2 class="section-title">Let's Build <span class="gradient-text">Together</span></h2>
           <p>Send us a message and we'll promptly discuss your project with you.</p>
 
-          <div class="c-info-list">
-            <a href="mailto:ajinkya.aglave@ahvertexsolution.com" class="c-info-item">
-              <div class="c-icon"><i class="fas fa-envelope"></i></div>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
               <div>
                 <strong>Email Us</strong>
-                <span>ajinkya.aglave@ahvertexsolution.com</span>
+                <a href="mailto:ajinkya.aglave@ahvertexsolution.com">ajinkya.aglave@ahvertexsolution.com</a>
               </div>
-            </a>
-            <a href="https://wa.me/918928694505" class="c-info-item" target="_blank">
-              <div class="c-icon"><i class="fab fa-whatsapp"></i></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
               <div>
                 <strong>WhatsApp</strong>
-                <span>+91 8928694505</span>
+                <a href="https://wa.me/918928694505">+91 8928694505</a>
               </div>
-            </a>
-            <div class="c-info-item">
-              <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
               <div>
                 <strong>Office</strong>
                 <span>Mumbai, India</span>
@@ -512,35 +476,37 @@
             </div>
           </div>
 
-          <div class="social-row">
-            <a href="#" class="soc"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="soc"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="soc"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="soc"><i class="fab fa-github"></i></a>
+          <div class="social-links">
+            <a href="#" class="social-btn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-github"></i></a>
           </div>
         </div>
 
-        <div class="contact-form-box reveal-right">
-          <form onsubmit="sendEmail(event)">
-            <div class="form-row2">
-              <div class="fg">
-                <label>Full Name *</label>
+        <div class="contact-form-wrap" data-aos="fade-left">
+          <form class="contact-form" onsubmit="sendEmail(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your Name</label>
                 <input type="text" id="name" placeholder="John Doe" required>
               </div>
-              <div class="fg">
-                <label>Email Address *</label>
+              <div class="form-group">
+                <label>Your Email</label>
                 <input type="email" id="email" placeholder="john@company.com" required>
               </div>
             </div>
-            <div class="fg">
+            <div class="form-group">
               <label>Subject</label>
               <input type="text" id="subject" placeholder="Project Inquiry">
             </div>
-            <div class="fg">
-              <label>Message *</label>
+            <div class="form-group">
+              <label>Message</label>
               <textarea rows="5" id="message" placeholder="Tell us about your project..." required></textarea>
             </div>
-            <button type="submit" class="btn-gold btn-submit">Send Message <i class="fas fa-paper-plane"></i></button>
+            <button class="btn btn-primary btn-full" type="submit">
+              Send Message <i class="fas fa-paper-plane"></i>
+            </button>
           </form>
         </div>
       </div>
@@ -549,32 +515,34 @@
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <div class="container footer-inner">
-      <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
         <div class="footer-brand">
-          <div class="nav-logo" style="font-size:22px; margin-bottom:16px;">AH<span>Vertex</span>Solution</div>
-          <p>Your technology partner for the AI-driven world. We transform businesses through intelligent solutions and
-            next-generation technology.</p>
-          <div class="social-row" style="margin-top:20px;">
-            <a href="#" class="soc"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="soc"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="soc"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="soc"><i class="fab fa-github"></i></a>
+          <div class="logo" style="font-size:24px; margin-bottom:15px;">
+            <span class="logo-ah">AH</span><span class="logo-vertex"> Vertex</span><span class="logo-sol">
+              Solution</span>
+          </div>
+          <p>Your technology partner for the AI-driven world. We transform businesses through intelligent solutions.</p>
+          <div class="social-links" style="margin-top:20px;">
+            <a href="#" class="social-btn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-github"></i></a>
           </div>
         </div>
 
         <div class="footer-col">
-          <h5>Company</h5>
+          <h4>Company</h4>
           <ul>
             <li><a href="#about">About Us</a></li>
-            <li><a href="#workflow">Our Approach</a></li>
-            <li><a href="#testimonials">Clients</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#testimonials">Clients</a></li>
+            <li><a href="#workflow">Our Approach</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h5>Services</h5>
+          <h4>Services</h4>
           <ul>
             <li><a href="#services">Web Development</a></li>
             <li><a href="#services">SEO Services</a></li>
@@ -585,7 +553,7 @@
         </div>
 
         <div class="footer-col">
-          <h5>Industries</h5>
+          <h4>Industries</h4>
           <ul>
             <li><a href="#">Healthcare</a></li>
             <li><a href="#">Real Estate</a></li>
@@ -599,7 +567,7 @@
 
       <div class="footer-bottom">
         <p>© 2026 AH Vertex Solution. All rights reserved.</p>
-        <div class="footer-links-row">
+        <div class="footer-bottom-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Use</a>
         </div>
@@ -608,8 +576,11 @@
   </footer>
 
   <!-- Back to Top -->
-  <button class="btt" id="btt" onclick="scrollTop()"><i class="fas fa-chevron-up"></i></button>
+  <button class="back-to-top" id="backToTop" onclick="scrollTop()">
+    <i class="fas fa-chevron-up"></i>
+  </button>
 
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="js/script.js"></script>
 </body>
 
