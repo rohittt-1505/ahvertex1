@@ -203,6 +203,21 @@
     align-items: center;
     justify-content: space-between;
   }
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+/* LEFT MENU */
+.menu-toggle {
+  order: 1;
+}
+
+/* RIGHT LOGO */
+.logo {
+  order: 2;
+  margin-left: auto;
+}
 
   .logo {
     font-size: 20px;
@@ -227,7 +242,7 @@
     display: flex;
     list-style: none;
     gap: 8px;
-    height: 100vh;
+    height: auto;
     /* 🔥 full height fix */
   }
 
@@ -247,14 +262,28 @@
   }
 
   .menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 6px;
-  }
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+/* hover */
+.menu-toggle:hover {
+  background: rgba(99,102,241,0.15);
+  border-color: var(--primary);
+}
 
   .menu-toggle span {
     display: block;
@@ -1256,6 +1285,11 @@
     color: white;
   }
 
+  @media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+}
   /* ============================================================
     BACK TO TOP
   ============================================================ */
@@ -1316,184 +1350,155 @@
   /* ============================================================
     RESPONSIVE — MOBILE (max-width: 768px)
   ============================================================ */
-  @media (max-width: 768px) {
-    section {
-      padding: 70px 0;
-    }
+ @media (max-width: 768px) {
 
-    /* Navbar mobile — Left-to-right slide drawer */
-    /* .nav-links {
-      position: fixed;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: 270px;
-      background: rgba(15, 23, 42, 0.98);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      flex-direction: column;
-      padding: 90px 20px 40px;
-      gap: 4px;
-      border-right: 1px solid var(--border);
-      z-index: 850;
-      display: flex;
-      transform: translateX(-100%);
-      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 8px 0 40px rgba(0, 0, 0, 0.5);
-    } */
-
-    .nav-links {
-      position: fixed;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: 280px;
-
-      background: rgba(15, 23, 42, 0.98);
-      backdrop-filter: blur(20px);
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      /* 🔥 CENTER ALIGN */
-      justify-content: center;
-      /* 🔥 VERTICAL CENTER */
-
-      gap: 30px;
-      /* 🔥 spacing perfect */
-
-      transform: translateX(-100%);
-      transition: transform 0.4s ease;
-
-      border-right: 1px solid var(--border);
-      z-index: 850;
-    }
-
-    .nav-links.open {
-      transform: translateX(0);
-    }
-
-    /* .nav-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 840;
-      backdrop-filter: blur(2px);
-    } */
-    .nav-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.6);
-      /* darker */
-      z-index: 840;
-      transition: opacity 0.3s ease;
-    }
-
-    .nav-overlay.open {
-      display: block;
-    }
-
-    /* .nav-link {
-      padding: 13px 16px;
-      border-radius: 10px;
-      font-size: 15px;
-    } */
-    .nav-link {
-      width: 100%;
-      text-align: center;
-
-      padding: 18px 0;
-      /* 🔥 height badhayi */
-      font-size: 17px;
-      letter-spacing: 0.5px;
-
-      border-radius: 12px;
-      transition: all 0.3s ease;
-    }
-
-    .nav-links li {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-
-    .menu-toggle {
-      display: flex;
-    }
-
-    /* Hero */
-    .hero-title {
-      font-size: 36px;
-    }
-
-    .hero-stats {
-      gap: 20px;
-    }
-
-    .stat-num {
-      font-size: 28px;
-    }
-
-    .stat-divider {
-      height: 30px;
-    }
-
-    /* Services */
-    .service-grid {
-      grid-template-columns: 1fr;
-    }
-
-    /* About cards */
-    .about-cards {
-      grid-template-columns: 1fr;
-    }
-
-    /* Testimonials */
-    .testimonial-grid {
-      grid-template-columns: 1fr;
-    }
-
-    /* Contact form */
-    .contact-form .form-row {
-      grid-template-columns: 1fr;
-    }
-
-    .contact-form-wrap {
-      padding: 24px;
-    }
-
-    /* Footer */
-    .footer-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .footer-bottom {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    /* Workflow line */
-    .workflow-steps::before {
-      left: 35px;
-    }
-
-    .workflow-step {
-      padding-left: 10px;
-    }
-
-    .step-num {
-      min-width: 54px;
-      height: 54px;
-      font-size: 15px;
-    }
-
-    /* CTA */
-    .cta-box {
-      padding: 40px 24px;
-    }
+  section {
+    padding: 70px 0;
   }
+
+  /* 🔥 SIDEBAR FIX (LEFT SLIDE PROPER) */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;          /* 🔥 FULL HEIGHT */
+    width: 270px;
+
+    background: #0f172a;    /* clean solid bg */
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 80px 20px 20px;
+
+    transform: translateX(-100%);
+    transition: transform 0.35s ease;
+
+    border-right: 1px solid var(--border);
+    z-index: 999;
+
+    overflow-y: auto;       /* scroll if needed */
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+  }
+
+
+
+  /* 🔥 OVERLAY FIX */
+  .nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s ease;
+    z-index: 840;
+  }
+
+  .nav-overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* 🔥 MENU ITEMS FIX */
+  .nav-link {
+    width: 100%;
+    text-align: left;   /* ✅ LEFT TEXT */
+
+    padding: 14px 16px;
+    font-size: 16px;
+
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links li {
+    width: 100%;
+    margin-bottom: 8px;
+    margin-left: 70px;
+    margin-top: 50px;
+  }
+
+  /* 🔥 SHOW MENU BUTTON */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-stats {
+    gap: 20px;
+  }
+
+  .stat-num {
+    font-size: 28px;
+  }
+
+  .stat-divider {
+    height: 30px;
+  }
+
+  /* Services */
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* About cards */
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Testimonials */
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact form */
+  .contact-form .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-wrap {
+    padding: 24px;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Workflow line */
+  .workflow-steps::before {
+    left: 35px;
+  }
+
+  .workflow-step {
+    padding-left: 10px;
+  }
+
+  .step-num {
+    min-width: 54px;
+    height: 54px;
+    font-size: 15px;
+  }
+
+  /* CTA */
+  .cta-box {
+    padding: 40px 24px;
+  }
+}
 
   @media (max-width: 480px) {
     .hero-btns {

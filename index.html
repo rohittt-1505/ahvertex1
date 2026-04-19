@@ -29,7 +29,7 @@
 
   <!-- ===== NAVBAR ===== -->
   <nav id="navbar">
-    <div class="container nav-container">
+    <!-- <div class="container nav-container">
       <a href="#home" class="logo">
         <span class="logo-ah">AH</span><span class="logo-vertex"> Vertex</span><span class="logo-sol"> Solution</span>
       </a>
@@ -44,7 +44,31 @@
       <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="Menu">
         <i class="fas fa-bars"></i>
       </button>
-    </div>
+    </div> -->
+
+    <div class="container nav-container">
+
+  <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <a href="#home" class="logo">
+    <span class="logo-ah">AH</span>
+    <span class="logo-vertex"> Vertex</span>
+    <span class="logo-sol"> Solution</span>
+  </a>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="nav-link active">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#services" class="nav-link">Services</a></li>
+    <li><a href="#workflow" class="nav-link">Approach</a></li>
+    <li><a href="#testimonials" class="nav-link">Clients</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
+  </ul>
+
+</div>
+
   </nav>
   <!-- Mobile overlay -->
   <div class="nav-overlay" id="navOverlay" onclick="closeMenu()"></div>
