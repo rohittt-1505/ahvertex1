@@ -111,8 +111,11 @@ function createParticles() {
 createParticles();
 
 // ===== BACK TO TOP =====
-function scrollTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 }
 
 // ===== SEND EMAIL =====
