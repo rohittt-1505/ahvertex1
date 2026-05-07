@@ -1603,13 +1603,13 @@
       0 10px 30px rgba(99, 102, 241, 0.35);
 
     transition: all 0.4s ease;
-}
+  }
 
-.ceo-img img:hover {
+  .ceo-img img:hover {
     transform: scale(1.04);
     box-shadow:
       0 20px 45px rgba(99, 102, 241, 0.45);
-}
+  }
 
   .ceo-content h3 {
     font-size: 26px;
